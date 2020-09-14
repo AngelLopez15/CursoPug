@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Bucles
+  body
+    - const names =['angel','octavio','angel2','octavio2']
+    //- bucle for each
+    //- dentro del for podemos usar codigo 
+    //- En caso de que el arreglo este vacio podemos usar un else
+    each name in names
+      p= `${name.charAt(0).toUpperCase()}${name.substring(1)}`
+    else
+      p Arreglo vacio
+    //- Para recorrer u objeto
+    -
+      const person ={
+        name:'Angel',
+        email:'correo@correo.com'
+      }
+    each value, key in person
+      p= `${key}: ${value}`
+    
+    each value, index in names
+      p= `${index+1}: ${value}`
+    //- tambien tenemos el bucle while pero es mejor usar los for

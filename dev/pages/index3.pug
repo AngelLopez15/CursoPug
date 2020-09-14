@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Condicionales
+  body
+    - let username= true
+    - let hour = 15
+    if username
+      p Bienvenido
+    else
+      p Registrese para continuar
+    if hour === 9
+      p Buenos dias
+    else if hour===15
+      p buenas tardes
+    else
+      p Buenas noches
+    //- Usando el operador ternario para. 
+    - let username2 = true
+    p(class= username2 ? 'registrado' : 'no-registrado' ) hola

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    //- poner el link de los css
+    link(rel="stylesheet", href="styles.css")
+    title variables
+  body
+    header
+      nav#main-menu
+        ul.main-menu
+          li: a(href="#") Item 1
+          li: a(href="#") Item 2
+          li: a(href="#") Item 3
+          li: a(href="#") Item 4
+          li: a(href="#") Item 5
+    //- usando variables en pug
+    -const name='Angel López'
+    //- usando arreglos
+    -const numbers=[1,2,3,4,5]
+    //- para usar objetos en javascript se debe poner un salto de linea y luego una identaacion
+    -
+      const person={
+        name: 'Angel',
+        lastname: 'Octavio',
+        age: 29
+      } 
+    p= `Hola, soy ${name}`
+    ul
+      li= numbers[0]
+      li= numbers[1]
+      li= numbers[2]
+      li= numbers[3]
+      li= numbers[4]
+    p= `Soy ${person.name} ${person.lastname} y tengo ${person.age}`
+    script(src="scripts.js")
